@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% assign author = site.authors[page.author] %}
+<div class="content">
+  <h2>{{ page.title }}</h2>
+  <p class="meta"><img src="http://www.gravatar.com/avatar/{{ author.gravatar_md5 }}?size=32" width="32" height="32" alt="{{ author.display_name }}"> {{ author.display_name }}, {{ page.date | date_to_string }}</p>
+  <div id="post">
+    {{ content }}
+  </div>
+  <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false"></div>
+  {% if site.twitter.enabled and site.twitter.username %}
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.twitter.username }}" data-lang="{{ site.twitter.lang }}" data-related="{{ site.twitter.username }}" data-hashtags="{{ site.twitter.hashtags | join:',' }}" data-dnt="true">Tweet</a>
+  {% else %}
+  <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
+  {% endif %}
+  {% if site.disqus.enabled and site.disqus.shortname and page.comments_enabled %}
+  <div id="disqus_thread"></div>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  {% endif %}
+  <div id="fb-root"></div>
+</div>
+{% include sharing.html %}

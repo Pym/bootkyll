@@ -1,0 +1,33 @@
+# Bootkyll configuration
+# ----------------------
+#
+name: Bootkyll
+short_description: A light theme for Jekyll
+meta_description: 'Bootkyll is a light theme for Jekyll, made easily customizable with Bootswatch. Crafted with love by Pym.'
+url: http://www.bootkyll.com
+feed_url: http://feed.bootkyll.com
+theme: superhero # choose one between: amelia, cosmo, flatly, readable, slate, superhero, cerulean, cyborg, journal, simplex, spacelab, united
+image_border_color: '#E36B23' # @orange from superhero theme
+contact_email: email@domain.com
+authors:
+  admin:
+    display_name: Admin
+    gravatar_md5: # generate md5 like this: `$ echo -n "email@domain.com" | openssl md5`
+analytics:
+  enabled: false
+  id:
+  url:
+disqus:
+  enabled: false
+  shortname:
+twitter:
+  enabled: true
+  lang: en
+  username: Pym
+  hashtags: [bootkyll, jekyll]
+
+# Jekyll configuration
+# --------------------
+# see: http://jekyllrb.com/docs/configuration/
+#
+exclude: [components, bower.json, CNAME]
