@@ -1,6 +1,6 @@
 # Bootkyll
 
-[Bootkyll](https://github.com/Pym/bootkyll) is a light them for Jekyll, made easily customizable thanks to [Bootswatch](http://bootswatch.com/).
+[Bootkyll](https://github.com/Pym/bootkyll) is a light them for [Jekyll](http://jekyllrb.com/), made easily customizable thanks to [Bootswatch](http://bootswatch.com/).
 
 Featuring an HTML 5 layout with Gravatar support, multiple authors, Google Analytics, Disqus and Twitter integration.
 
