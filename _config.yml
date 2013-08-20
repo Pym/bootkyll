@@ -30,4 +30,4 @@ twitter:
 # --------------------
 # see: http://jekyllrb.com/docs/configuration/
 #
-exclude: [components, bower.json, CNAME]
+exclude: [public, bower_components, bower.json, CNAME]
