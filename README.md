@@ -27,14 +27,14 @@ Clone this repository and then execute `$ bower install`.
     meta_description: 'Bootkyll is a light theme for Jekyll, made easily customizable with Bootswatch. Crafted with love by Pym.'
     url: http://www.bootkyll.com
     feed_url: http://feed.bootkyll.com
-    theme: superhero # choose one between: amelia, cosmo, flatly, readable, slate, superhero, cerulean, cyborg, journal, simplex, spacelab, united
-    image_border_color: '#E36B23' # @orange from superhero theme
+    theme: cerulean # choose one between: amelia, cosmo, flatly, readable, slate, cerulean, cyborg, journal, simplex, spacelab, united
+    image_border_color: '#317EAC' # blue from cerulean theme
     contact_email: email@domain.com
     authors:
       admin:
         display_name: Admin
         gravatar_md5: # generate md5 like this: `$ echo -n "email@domain.com" | openssl md5`
-    analytics:
+    analytics: # only work with Google Analytics Universal
       enabled: false
       id:
       url:

@@ -15,42 +15,47 @@
         <link rel="stylesheet" href="/css/syntax.css">
         <link rel="stylesheet" href="/css/themes/{{ site.theme }}.css">
         <link rel="stylesheet" href="/css/custom.css">
-        <link rel="stylesheet" href="/css/responsive.css">
         <link rel="alternate" type="application/atom+xml" href="{{ site.feed_url }}">
     </head>
     <body>
         <div class="container">
-            <header>
+            <header class="page-header">
                 <h1 class="title"><a href="/">{{ site.name }}</a></h1>
                 <p class="lead">{{ site.short_description }}</p>
             </header>
-            <div class="container-fluid">
-                <div class="row-fluid">
-                    <div class="span9">
-                        <section>
-                            {{ content }}
-                        </section>
+            <div class="row">
+                <div class="col-md-9">
+                    <section>
+                        {{ content }}
+                    </section>
+                </div>
+                <div id="sidebar" class="col-md-3">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">About</h3>
+                      </div>
+                      <div class="panel-body">
+                        {{ site.meta_description }}
+                      </div>
                     </div>
-                    <div class="span3">
-                        <div class="well sidebar-nav">
-                            <ul class="nav nav-list">
-                                <li class="nav-header">About</li>
-                                <li>{{ site.meta_description }}</li>
-                                <li class="nav-header">Contact us</li>
-                                <li><a href="mailto:{{ site.authors.email }}">Contact {{ site.authors.admin.display_name }}</a></li>
-                                {% if site.twitter.enabled and site.twitter.username %}
-                                <li><a href="https://twitter.com/{{ site.twitter.username }}" class="twitter-follow-button" data-show-count="false" data-lang="{{ site.twitter.lang }}" data-dnt="true">Follow @{{ site.twitter.username }}</a></li>
-                                {% endif %}
-                            </ul>
-                        </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Contact us</h3>
+                      </div>
+                      <div class="panel-body">
+                        <p><a href="mailto:{{ site.authors.email }}">Contact {{ site.authors.admin.display_name }}</a></p>
+                        {% if site.twitter.enabled and site.twitter.username %}
+                        <p><a href="https://twitter.com/{{ site.twitter.username }}" class="twitter-follow-button" data-show-count="false" data-lang="{{ site.twitter.lang }}" data-dnt="true">Follow @{{ site.twitter.username }}</a></p>
+                        {% endif %}
+                      </div>
                     </div>
                 </div>
-                <footer>
-                    <p>&copy; {{ site.name }}</p>
-                    <!-- If you remove this you will die from cancer. True story. -->
-                    <small><a href="http://github.com/Pym/bootkyll">Bootkyll</a> theme by <a href="http://pym.me/">Pym</a></small>
-                </footer>
             </div>
+            <footer>
+                <p>&copy; {{ site.name }}</p>
+                <!-- If you remove this you will die from cancer. True story. -->
+                <small><a href="https://github.com/Pym/bootkyll">Bootkyll</a> theme by <a href="http://pym.me/">Pym</a></small>
+            </footer>
         </div>
         {% include twitter.html %}
         {% if site.analytics.enabled and site.analytics.id %}
