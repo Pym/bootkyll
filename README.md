@@ -34,6 +34,7 @@ Clone this repository and then execute `$ bower install`.
       admin:
         display_name: Admin
         gravatar_md5: # generate md5 like this: `$ echo -n "email@domain.com" | openssl md5`
+        google_plus: # Google Plus ID (for Google Authorship)
     analytics: # only work with Google Analytics Universal
       enabled: false
       id:
