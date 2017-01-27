@@ -43,7 +43,7 @@
                         <h3 class="panel-title">Contact us</h3>
                       </div>
                       <div class="panel-body">
-                        <p><a href="mailto:{{ site.authors.email }}">Contact {{ site.authors.admin.display_name }}</a></p>
+                        <p><a href="mailto:{{ site.contact_email }}">Contact {{ site.authors.admin.display_name }}</a></p>
                         {% if site.twitter.enabled and site.twitter.username %}
                         <p><a href="https://twitter.com/{{ site.twitter.username }}" class="twitter-follow-button" data-show-count="false" data-lang="{{ site.twitter.lang }}" data-dnt="true">Follow @{{ site.twitter.username }}</a></p>
                         {% endif %}
